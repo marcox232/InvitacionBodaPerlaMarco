@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=}, initial-scale=1.0">
+    <!--Traer Hojas de Estilo-->
+    <link rel="stylesheet" href="style.css">
+    <!--Fuente de Etiquetas Google-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!--Estilos de Letras de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Parisienne&family=Quicksand:wght@300&family=Tangerine&display=swap" rel="stylesheet">
+
+    <!--Link Iconos-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Perla y Marco</title>
+</head>
+<body>
+    
+    
+    
+    <main>
+        
+        <!--Pagina Principal-->
+        <div id="pagina-principal">  
+            <!--Menu Apartados importantes-->
+            <nav class="nav">
+                <div class="nav-container">
+                    <a href="#menu" class="nav-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                          </svg>
+                        </a>
+                    <a href="#" class="nav-menu nav-menu--second">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                          </svg>
+                    </a>
+                    <ul class="dropdown" id="menu">
+                        <!--Contenido Listado: Incio-->
+                        <li class="dropdown-list">
+                            <a href="#contenedor-Datos-Novios" class="dropdown-link">
+                                <span class="material-symbols-outlined">
+                                    home
+                                    </span>
+                                <span class="dropdown-span">Inicio</span>
+                            </a>
+                        </li>
+                        <!--Contenido Listado: Informoacion Iglecia-->
+                        <li class="dropdown-list">
+                            <a href="#informacion-iglesia-contenedor" class="dropdown-link">
+                                <span class="material-symbols-outlined">
+                                    notifications
+                                    </span>
+                                <span class="dropdown-span">Iglecia</span>
+                            </a>
+                        </li>
+                        <!--Contenido Listado: Informoacion Salon-->
+                        <li class="dropdown-list">
+                            <a href="#informacion-recepcion-contenedor" class="dropdown-link">                        
+                                <span class="material-symbols-outlined">
+                                    celebration
+                                    </span>
+                                <span class="dropdown-span">Salon</span>
+                            </a>
+                        </li>
+                        <!--Contenido Listado: Informoacion Nuestra Historia-->
+                        <li class="dropdown-list">
+                            <a href="#nuestra-historia-contenedor" class="dropdown-link">                        
+                                <span class="material-symbols-outlined">
+                                    history_edu
+                                    </span>
+                                <span class="dropdown-span">Nuestra Historia</span>
+                            </a>
+                        </li>
+                        <!--Contenido Listado: Informoacion Regalo-->
+                        <li class="dropdown-list">
+                            <a href="#regalo-contenedor" class="dropdown-link">                        
+                                <span class="material-symbols-outlined">
+                                    checklist
+                                    </span>
+                                <span class="dropdown-span">Mesa de Regalos</span>
+                            </a>
+                        </li>
+                        <!--Contenido Listado: Informoacion Confirmacion-->
+                        <li class="dropdown-list">
+                            <a href="#contenedor-confirmacion-asistencia" class="dropdown-link">                        
+                                <span class="material-symbols-outlined">
+                                    task
+                                    </span>
+                                <span class="dropdown-span">Confirmacion</span>
+                            </a>
+                        </li>
+        
+                    </ul>
+                </div>
+            </nav>  
+            
+            <div id="contenedor-Datos-Novios">
+                <!--Parte Superior-->
+                <div class="titulo_principal"><H3>NUESTRA BODA</H1><br></div>
+                <!--Nombre de Los Novios-->
+                <div class="datos-centrados"><h1>Perla</h1>                    
+                    <h3>Castañeda Benítez</h3>
+                    <div id="contenedor_letras"><hr><h1>&</h1><hr></div>
+                    <h1>Marco Antonio</h1>
+                    <h3>Rodríguez Bizarro</h3>        
+                </div>
+                <!--Seccion Cuenta regresiva-->
+                <div id="contenedor_cuenta_regresiva">
+                    <!--Cuenta Regresiva-->
+                    <div><span id="days"></span> Dias</div>
+                    <div><span id="hours"></span> Horas</div>
+                    <div><span id="minutes"></span> Min</div>
+                    <div><span id="seconds"></span>Seg</div>                       
+                    
+                </div>
+            </div>
+        </div>
+        <!--Seccion Musica de los novios-->
+        <div id="seccion_musica_novios">
+            <div><p>Dale <b>Play</b> para escuchar nuestra canción</p></div>
+            <div><!--Reproductor de musica-->
+                <audio src="./Musica/Musica de Fondo/WhatsApp Audio 2023-09-14 at 12.03.57 AM.mpeg" autoplay loop controls></audio>
+                
+            </div>
+        </div>
+        <!--Seccion Padres e invitacion general-->
+        <div id="pagina-segunda-padres">            
+            <div><!--Seccion imagen divicion--></div>
+            <div id="pagina-segunda-info">
+                <p class="pagina-segundo-datos"><em>Con la gracias de Dios y la bendición de nuestros padres</em></p>
+                <!--Informacion Padres de la Novia-->
+                <p class="diseno-padres-datos">Rosa María Benítez Martínez<br>
+                    ✝ Mauro Casteñada Castañeda<br><br>
+                </p>
+                <!--Informacion Padres del Novio-->
+                <p class="diseno-padres-datos">Evangelina Bizarro Jarillo<br>
+                    ✝ José Elisa Nicodemus Rodríguez Yllescas<br><br>
+                </p>
+
+                <p class="pagina-segundo-datos">Uniremos nuestras vidas por el santo 
+                    sacramento del matrimonio, tenemos el honor de invitarte 
+                    a ser parte de esta celebración.</p>
+            </div>
+        </div>
+        <!--Informacion Iglesia-->
+        <div id="informacion-iglesia-contenedor">            
+            <div class="datos-contenedor">
+                <!--Contenedor informe Iglesia-->
+                <div>
+                    <!--Encabezado-->
+                    <p>¡Nos Casamos!</p>
+                    <div class="fecha-boda-contenedor">
+                        <div><b>09</b></div>
+                        <div>│</div>
+                        <div><b>12</b></div>
+                        <div>│</div>
+                        <div><b>2023</b></div> 
+                    </div>                   
+                    <h3>Iglesia</h3>
+                </div>
+                <div>
+                    <!--Imagenes Iglesia Galeria-->
+                    <img src="./Imagenes/Fotos Ubicacion/Iglesia/Igelsia_Divi_Salvador.jpeg" alt="Iglesi Divini Salvador">
+                </div>
+                <div>
+                    <!--Informacion del Lugar-->
+                    <div>
+                        <p><h3>Parroquia del Divino Salvador</h3></p>
+                        <p>Carretera Cuernavaca - Tepoztlan<br>
+                            Esquina Juan Aldama<br>
+                            Ocotepec Morelos<br>
+                            03:30 PM<br>
+                        </p>
+                    </div>                    
+                </div>
+                <div>
+                    <!--Boton para ver el Mapa-->
+                    <a href="https://maps.app.goo.gl/TnXsVWLWuJAWqi2A8">
+                    <button><b>Ver Mapa</b></button>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+        <!--Informacion Recepcion-->
+        <div id="informacion-recepcion-contenedor">
+            <div class="datos-contenedor datos-contenedor-segundo">
+                <!--Contenedor informe Recepcion-->
+                <div>
+                    <!--Encabezado
+                    <p></p>
+                    <div class="fecha-boda-contenedor">
+                        <div><b>09</b></div>
+                        <div>│</div>
+                        <div><b>12</b></div>
+                        <div>│</div>
+                        <div><b>2023</b></div> 
+                    </div>  -->
+                    <h3>Recepción</h3>
+                </div>
+                <div>
+                    <!--Imagenes Recepcion Galeria-->
+                    <img src="./Imagenes/Fotos Ubicacion/recepcion/Salon_Lomas_Ahuatepec.jpeg" alt="Lomas de Ahuatepec">
+                </div>
+                <div>
+                    <!--Informacion del Lugar-->
+                    <div>
+                        <p><h3>Jardín Lomas de Ahuatepec</h3></p>
+                        <p>Camino Real<br>
+                            Esquina Azucena<br>
+                            Ahuatepec Morelos<br>
+                            05:00 PM<br>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <!--Boton para ver el Mapa-->
+                    <a href="https://maps.app.goo.gl/xz4MhngrDTGfJWvS9">
+                       <button><b>Ver Mapa</b></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--Nuestra Historia-->
+        <div id="nuestra-historia-contenedor">
+            <!--Contenedor-->
+            <div class="datos-nuestra-historia">
+                <div><h3>Nuestra Historia</h3></div>
+                <div><!--Imagen de los novios (Galeria)-->
+                    <div class="container-carousel">
+                        <div class="carruseles" id="slider">
+                            <section class="slider-section">
+                                <img src="./Imagenes/Fotos_Galeria/Perla_Marco_1.jpg">
+                            </section>
+                            <section class="slider-section">
+                                <img src="./Imagenes/Fotos_Galeria/Perla_Marco_2.jpg">
+                            </section>
+                            <section class="slider-section">
+                                <img src="./Imagenes/Fotos_Galeria/Perla_Marco_3.jpg">
+                            </section>
+                            <section class="slider-section">
+                                <img src="./Imagenes/Fotos_Galeria/Perla_Marco_4.jpg">
+                            </section>
+                            <section class="slider-section">
+                                <img src="./Imagenes/Fotos_Galeria/Perla_Marco_5.jpg">
+                            </section>
+                            <section class="slider-section">
+                                <img src="./Imagenes/Fotos_Galeria/Perla_Marco_6.jpg">
+                            </section>
+                            <section class="slider-section">
+                                <img src="./Imagenes/Fotos_Galeria/Perla_Marco_7.jpg">
+                            </section>
+                            <section class="slider-section">
+                                <img src="./Imagenes/Fotos_Galeria/Perla_Marco_8.jpg">
+                            </section>
+                            <section class="slider-section">
+                                <img src="./Imagenes/Fotos_Galeria/Perla_Marco_9.jpg">
+                            </section>
+                        </div>
+                        <div class="btn-left"><i class='bx bx-chevron-left'></i></div>
+                        <div class="btn-right"><i class='bx bx-chevron-right'></i></div>
+                    </div>
+                </div>
+                <div><p>Nos conocimos hace siete años.<br>
+                    Seis meses después iniciamos un bonito noviazgo.<br>
+                    En estos años hemos vivido hermosas historias y aventuras.<br> 
+                    Y después de crecer y madurar, nos casamos por el civil en el mes de marzo, 
+                    Ahora reafirmaremos nuestro compromiso ante Dios.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--Itinerario-->
+        <div id="itinerario-contenedor">
+            <!--Contenedor Imagen-->
+            <div class="itinerario-imagen-contenedor">
+                <!--imagen del itinerario-->
+                <img src="./Imagenes/Imagenes_Fondo/Itinerario.png" alt="Imagen_Itinerario">
+            </div>
+        </div>
+        <!--Seccion de regalos-->
+        <div id="regalo-contenedor">
+            <div class="informacion-regalo-contenedor">
+                <p class="margen-estilo"><h3>Regalo</h3></p>
+                <!--Imagen o icono de regalo-->
+                <img class="margen-estilo" src="./Imagenes/Imagenes_Fondo/imagen_regalo_2-removebg-preview.png" alt="Amazon">
+                <p class="margen-estilo">Tu presencia es nuestro mejor regalo, <br>
+                   pero si deseas hacernos un obsequio,<br>
+                   te dejamos unas sugerencias.</p>
+                <a href="https://www.amazon.com.mx/wedding/perla-castañeda-marco-rodríguez-cuernavaca-december-2023/registry/1G0B3AD6DWYCB">
+                <button class="margen-estilo"><b>Mesa de Regalos</b></button>
+                </a>    
+            </div>
+        </div>
+        <!--Confirmacion de Asistencia-->
+        <div id="contenedor-confirmacion-asistencia">
+            <div class="informacion-asistencia">
+                <div>
+                    <h3>Confirmar Asistencia</h3>
+                    <!--Icono de Confirmacion-->
+                    <p>Tu presencia es muy importante para nosotros, por favor confirma tu asistencia antes del 1 de diciembre.</p>                                   
+                    
+                    
+                </div>
+                <img src="./Imagenes/Imagenes_Fondo/division_pagin 2.png">
+                <div id="informacion-invitados-confirmacion" class="configuracion-altura">
+                    <form method="POST" name="submit-to-google-sheet" id="formulario-invitados" class="configuracion-altura">
+                        <div class="configuracion-altura">
+                            <div class="input-fomulario-confirmacion">
+                                <input type="hidden" name="familia-invitacion" value="Fam Arroyo Román">
+                                <input name="nombre1" type="checkbox" value="Iridian Román Rodríguez" placeholder="email">Iridian Román Rodríguez<br>
+                                <input name="nombre2" type="checkbox" value="Cesar Arroyo Soto" placeholder="email">Cesar Arroyo Soto<br>
+                                <input name="nombre3" type="checkbox" value="Valentina Arroyo Román" placeholder="email">Valentina Arroyo Román<br>
+                            </div>  
+                            <div class="button-fomulario-confirmacion">                      
+                                <button type="submit">Confirmar</button>
+                            </div>
+                        </div>
+                      </form>
+                </div>
+                <!--Div para mandar mensaje de confirmacion de registro-->
+                <div id="mensaje-confirmacion-invitados">
+                    <div>
+                        <h2>¡ Gracias por Confirmar !</h2>
+                    </div>
+                </div>
+                <img src="./Imagenes/Imagenes_Fondo/division_pagin_final 2.png">
+            </div>
+        </div>
+        <!--Galeria de los Novios-->
+        <div>
+            <!--Aqui van las fotos-->
+        </div>
+        <!--Video Fotografo-->
+        <div id="contenedor-video-fotografo">
+            <div class="contenedor-video">
+                
+                <div>
+                    <h2>Video Marco y Perla</h2>
+                    <p>Les compartimos un pequeño video</p>
+                </div>
+                <div>
+                    <a href="https://youtu.be/P_nIu01q4sU?si=j21xRGvL4RXso_Xa">
+                    <button><b>Ver Video</b> <svg class="svg-video-youtube" xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></button>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <!--Poema y no Niños-->
+        <div id="contenedor-poema">
+            <div class="contenedor-letras-poema">
+                <img class="formato-imagen-poema" src="./Imagenes/Imagenes_Fondo/division_pagin.png" alt="Imagen_Division">
+                <h1 class="class-separacion estilo-letra">Me Tienes en Tus Manos</h1>
+                <p class="class-separacion">
+                Tal vez no es perfecto, pero haré todo en mis manos para que lo sea, tampoco solo serán momentos felices, 
+                habrá muchos momentos difíciles, No soy perfecto, pero siempre trataré de que esto lo sea, 
+                siempre buscaré tu felicidad, te valoraré y respetaré, te apoyaré y cuidaré, te abrazaré cuando lo necesites, 
+                seguiré dando todo de mí<br><br>
+
+                Por esto ...<br><br>
+
+                Por Nosotros ....<br><br>
+                </p>
+                <img class="formato-imagen-poema" src="./Imagenes/Imagenes_Fondo/division_pagin_final.png" alt="Imagen_Division">
+            </div>
+        </div>
+        <!--Imagen del Final-->
+        <div id="contendor-final">
+            <div class="fomato-letras-contenedor">
+                <!--Imagen de los novios-->
+                <p>El mejor tipo de amor es aquel que despierta el alma y nos hace aspirar a más.</p>
+                <h1 class="formato-letras-final">Marco y Perla.</h1>
+            </div>
+        </div>
+    </main>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

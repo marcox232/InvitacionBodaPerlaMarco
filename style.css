@@ -1,0 +1,792 @@
+/****** Disño principal ******/
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+/**/
+/**/
+/*Diseño Menu Desplegable*/
+/**/
+/**/
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: white;
+}
+
+.nav{       
+    
+    --img1: scale(1);
+    --img2: scale(0);
+
+}
+
+.nav:has( .dropdown:target ){
+    --img1: scale(0);
+    --img2: scale(1); 
+
+    --clip: clip-path: inset(0 0 0 0);
+}
+
+.nav-container{
+    width: 90%;
+    margin: 0 auto;
+    height: 70px;
+
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-areas: "title img";
+    justify-content: space-between;
+    align-items: center;
+    
+    overflow: hidden;
+}
+
+
+
+.nav-menu{
+    
+    grid-area: img;
+    position: relative;
+    z-index: 3;
+
+    transform: var(--img1);
+}
+
+.nav-menu--second{
+    
+    transform: var(--img2);
+}
+
+.nav-icon{
+   
+    width: 25px;
+    height: auto;
+    display: block;
+}
+
+.dropdown{
+    position: absolute;
+    background-color: black;
+    width: 75%;
+    max-width: 300px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 1em;
+
+    
+    align-items: center;
+    gap: 1rem;
+
+    overflow-y: auto;
+
+    clip-path: var( --clip , inset(0 0 100% 100%) );
+    transition: clip-path 1s;
+}
+
+.dropdown-list{
+    list-style: none;
+}
+
+.dropdown-link{
+    color: rgb(184, 187, 191);
+    padding: 1em .5em;
+    text-decoration: none;
+
+    display: flex;
+    align-items: top    ;
+    gap: .6rem;
+
+    position: relative;
+    border-radius: 6px;
+
+}
+
+/**********************************************************/
+/********** Diseño Pagina Principal ***********************/
+
+#pagina-principal{
+    height: 100vh;
+    background: linear-gradient(rgb(5,7,12,0.45),rgb(5,7,12,0.45)), url(./Imagenes/Imagenes_Fondo/Fondo_Principal_Perla_Marco.jpg);
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646; 
+    
+
+}
+
+#contenedor-Datos-Novios{
+    min-height: 100%;
+    display: flex;   
+    text-align: center;
+    flex-direction: column;
+    color: white;
+}
+
+.titulo_principal{
+    font-size: 2em;
+}
+
+.datos-centrados{
+    margin: 10% auto;
+}
+
+.datos-centrados h1{
+    font-family: 'Tangerine', cursive;
+    font-weight: normal;
+    font-size: 4em;
+}
+.datos-centrados h3{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+}
+
+.datos-centrados hr{
+    width: 50%;
+    
+}
+
+#contenedor_letras{
+    display: flex;
+    align-items: center;
+}
+
+#contenedor_letras h1{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*////////////////*/
+/*Cuenta Regresiva*/
+/*////////////////*/
+#contenedor_cuenta_regresiva{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contenedor_cuenta_regresiva div{
+    font-family: 'Quicksand', sans-serif;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    width: 15%;
+}
+
+#contenedor_cuenta_regresiva div span{
+    margin: 13px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+/*////////////////*/
+/*Musicas Novios*/
+/*////////////////*/
+
+#seccion_musica_novios{
+    background-color: #000026    ; 
+    color: white;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#seccion_musica_novios div{
+    font-family: 'Quicksand', sans-serif;
+    margin: 10px;
+}
+
+/*////////////////*/
+/*Informacion Datos Padres*/
+/*////////////////*/
+#pagina-segunda-padres{
+    height: 100vh;
+    background-color: #000026;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 45px;
+
+}
+
+#pagina-segunda-info{
+    padding: 15px;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagina-segundo-datos{
+    margin: 13px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+ .diseno-padres-datos{
+    margin: 13px;
+    font-family: 'Tangerine', cursive;
+    font-size: 1.5em;
+ }
+
+
+/*////////////////*/
+/*Informacion Iglesia*/
+/*////////////////*/
+
+#informacion-iglesia-contenedor{
+    height: 100vh;
+    background-image: url(./Imagenes/Imagenes_Fondo/Fondo_1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 45px;
+}
+
+.datos-contenedor{
+    background-color: rgba(255, 255, 255, 0.65);
+    height: 95%;
+    width: 90%;
+    border: solid black 0.3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.datos-contenedor div{
+    margin: 5px 0px 10px 0px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.datos-contenedor div p{
+    margin: 5px 0px 3px 0px;
+}
+
+.datos-contenedor div img{
+    height: auto;
+    width: 100%;
+    margin: 0;
+}
+
+.datos-contenedor div button{
+   border: none;
+   background-color: darkgrey;
+   font-family: 'Quicksand', sans-serif;
+   height: 5vh;
+   width: 18vh;
+    border-radius: 10% 10% 10% 10%;
+}
+
+.fecha-boda-contenedor{
+    display: flex;
+}
+
+.fecha-boda-contenedor div{
+    width: 40px;
+}
+
+/*////////////////*/
+/*Informacion Recepcion*/
+/*////////////////*/
+
+#informacion-recepcion-contenedor{
+    height: 100vh;
+    background-color: #000026;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 45px;
+}
+
+.datos-contenedor-segundo{
+    background-color: white;
+    border: solid white 0.3px;
+}
+
+
+
+/*////////////////*/
+/*Informacion Nuestra Historia*/
+/*////////////////*/
+
+#nuestra-historia-contenedor{
+    height: 100vh;
+    background-image: url(./Imagenes/Imagenes_Fondo/Fondo_1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.datos-nuestra-historia{
+   border: solid black 0.3px;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+}
+
+.datos-nuestra-historia div{
+    margin: 10px;
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+}
+
+/*////////////////*/
+/*Galeria Fotos*/
+/*////////////////*/
+
+#slider{
+    margin: 0%;
+}
+
+.container-carousel {
+    position: relative;
+    width: auto;
+    height: 300px;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    border-radius: 15px;
+    overflow: hidden;
+  
+}
+
+.carruseles {    
+    width: 1000%;
+    height: 100%;
+    display: flex;
+
+}
+
+.slider-section {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #333333d4;
+    color: #fff;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+/*////////////////*/
+/*Estilo Itinerario*/
+/*////////////////*/
+
+#itinerario-contenedor{
+    background-color: #000026;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+}
+
+
+.itinerario-imagen-contenedor img{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+/*////////////////*/
+/*Estilo Seccion Regalo*/
+/*////////////////*/
+
+#regalo-contenedor{
+    height: 100vh;
+    background-image: url(./Imagenes/Imagenes_Fondo/Fondo_1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 45px;
+}
+
+
+
+.informacion-regalo-contenedor{
+    border: #000026 solid 1px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.informacion-regalo-contenedor button{
+    margin: 15px;
+    border: none;
+    background-color: darkgrey;
+    font-family: 'Quicksand', sans-serif;
+    height: 5vh;
+    width: 18vh;
+    border-radius: 10% 10% 10% 10%;
+}
+
+.informacion-regalo-contenedor img{
+    height: 110px;
+    width: auto;
+}
+
+.margen-estilo{
+    margin: 25px;
+}
+
+/*////////////////*/
+/*Estilo Seccion Confirmacion*/
+/*////////////////*/
+
+#contenedor-confirmacion-asistencia{
+    background-color: #000026;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 45px;  
+}
+
+.informacion-asistencia{
+    border: #000026 double 1px;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+.informacion-asistencia div h3{
+    margin-bottom: 10px;
+}
+
+.informacion-asistencia img{    
+    height: 5%;
+    width: auto;
+    margin: 10px;
+}
+
+#informacion-invitados-confirmacion{
+    height: 50%;
+    width: 70%;
+    border: white 8px solid;
+    margin: 5px;
+    font-family: 'Tangerine', cursive;    
+    font-size: 3.5vh;
+   
+}
+
+.configuracion-altura{
+    height: 100%;
+}
+
+.input-fomulario-confirmacion{
+    
+    height: 80%;
+}
+
+
+
+#informacion-invitados-confirmacion form div div input{
+    margin-top: 15px;
+    width:2.5vh;
+    height:2.5vh; 
+    margin-right: 5px;
+    
+}
+
+#informacion-invitados-confirmacion form div div button{
+    border: none;
+    background-color: darkgrey;
+    font-family: 'Quicksand', sans-serif;
+    height: 5vh;
+    width: 18vh;
+    border-radius: 10% 10% 10% 10%;
+    margin-top: 20px;
+    font-weight: bold;
+   
+}
+
+#mensaje-confirmacion-invitados{
+    display: none;
+}
+
+/*////////////////*/
+/*Estilo Seccion Video*/
+/*////////////////*/
+
+#contenedor-video-fotografo{
+    background-image: url(./Imagenes/Imagenes_Fondo/Fondo_1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+
+}
+
+.contenedor-video{    
+    height: 70%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+
+
+.contenedor-video div, h2, p, button{
+    margin: 5px;
+}
+
+.contenedor-video div button{
+    border: none;
+    background-color: darkgrey;
+    font-family: 'Quicksand', sans-serif;
+    height: 5vh;
+    width: 18vh;
+    border-radius: 10% 10% 10% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-video div button b{
+    margin-right: 3px;
+}
+
+.svg-video-youtube{
+    fill:#b92d2d;
+}
+/*////////////////*/
+/*Estilo Seccion Poema*/
+/*////////////////*/
+
+#contenedor-poema{
+    background-color: #000026;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;  
+}
+
+.formato-imagen-poema{
+    width: 90%;
+    height: auto;
+    margin: 20px;
+}
+
+.contenedor-letras-poema{
+    color: white;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 70%;
+}
+
+.class-separacion{
+    margin: 5px;
+}
+
+.estilo-letra{
+    font-family: 'Tangerine', cursive;
+    font-weight: normal;
+}
+
+/*////////////////*/
+/*Estilo Seccion Imagen Final*/
+/*////////////////*/
+
+#contendor-final{
+    height: 100vh;
+    background: linear-gradient(rgb(5,7,12,0.45),rgb(5,7,12,0.45)), url(./Imagenes/Imagenes_Fondo/Perla_Marco_8.jpg);
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 45px;
+}
+
+.fomato-letras-contenedor{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.formato-letras-final{
+    margin: 20px;
+    font-family: 'Tangerine', cursive;
+    font-weight: normal;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////*/
+/*Cambio de Estilso a Escritorio*/
+/*////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 720px) {
+
+    /*Modificaciones Pagina Principal*/
+    #contenedor-Datos-Novios .datos-centrados{
+        margin: 5% auto;
+    }
+    
+    /*Padres e invitacion general*/
+    .pagina-segundo-datos{
+        width: 80%;
+        font-size: 3vh;
+    }
+
+    .diseno-padres-datos{
+        font-size: 4vh;
+    }
+
+    /*Informacion Iglesia*/
+
+    /*Esta clase afecta tantpo como la informacion de Iglesia y Contenedor*/
+    .datos-contenedor div img{
+        width: 40%;
+    }
+
+    .datos-contenedor{
+        width: 50%;
+    }
+    /*Modificacion de Nuestra Historia*/
+    .datos-nuestra-historia{
+        width: 50%;
+    }
+
+    /*Seccion de Regalos*/
+
+    /*Es clase modifica Regalos y Confirmacion*/
+    .informacion-regalo-contenedor{
+        width: 50%;
+    }
+
+    .informacion-regalo-contenedor iframe{
+        height: auto;
+        width: 80%;
+    }
+
+    /*Poema Final*/
+
+    #contenedor-poema{
+        height: 60vh;    
+    }
+
+    .formato-imagen-poema {
+        width: 60%;
+    }
+
+    .class-separacion{
+        width: 70%;
+        font-size: 1.8vh;
+    }
+
+    .estilo-letra{
+        font-size: 5vh;
+    }
+
+}
+h3{
+    font-size: 28px;
+}
+
+
+@media (min-width: 420px) and (max-width: 559px){
+    h3{
+        font-size: 20px;
+    }  
+}
